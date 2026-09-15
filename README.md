@@ -115,7 +115,6 @@ Unlike passive linters that merely warn users, CHIVE's hook engine operates at t
 ## 🔒 Three-Layer Anti-Ignorance Defense Architecture
 
 Based on official [Claude Code Skills Documentation](https://code.claude.com/docs/en/skills) and community diagnostics ([LazySkills.sh](https://lazyskills.sh/troubleshooting/skills-not-triggering)), AI skills are frequently ignored due to 8 documented failure points (nesting depth, case sensitivity, YAML corruption, and truncation). CHIVE neutralizes all 8 via a three-layer defense:
-
 claude-code-chive-system/
 ├── .github/
 │   └── workflows/
