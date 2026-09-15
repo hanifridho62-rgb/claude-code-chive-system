@@ -116,6 +116,50 @@ Unlike passive linters that merely warn users, CHIVE's hook engine operates at t
 
 Based on official [Claude Code Skills Documentation](https://code.claude.com/docs/en/skills) and community diagnostics ([LazySkills.sh](https://lazyskills.sh/troubleshooting/skills-not-triggering)), AI skills are frequently ignored due to 8 documented failure points (nesting depth, case sensitivity, YAML corruption, and truncation). CHIVE neutralizes all 8 via a three-layer defense:
 
+
+
+claude-code-chive-system/
+├── .github/
+│   └── workflows/
+│       └── validate-skills.yml      # Automated GitHub Actions CI workflow
+├── .gitignore                       # Pre-configured ignore rules
+├── CLAUDE.md                        # Master directives & Zero-Bypass Policy
+├── ARCHITECTURE.md                  # System topology & domain disambiguation contract
+├── README.md                        # Comprehensive system documentation
+├── .claude-plugin/
+│   └── plugin.json                  # Official Claude Code plugin manifest
+├── .claude/
+│   ├── settings.json                # Hook event bindings (PreToolUse, PostToolUse)
+│   ├── hooks/                       # Executable shell hooks & Python inspectors
+│   │   ├── protect-invariants.sh    # PreToolUse file guard & AST trap scanner
+│   │   ├── expert_guard_scanner.py  # Static AST trap detector & remediation injector
+│   │   ├── post-skill-verify.sh     # PostToolUse syntax verification & self-healer
+│   │   ├── post_tool_self_heal.py   # Diagnostic self-healing recovery engine
+│   │   ├── pre-skill-check.sh       # SessionStart registry status injector
+│   │   └── fact-check-gate.sh       # CLI runner for fact verification
+│   └── skills/                      # 8 Domain-Specialized Agent Skills
+│       ├── orchestrator-CHIVE/      # Master Dispatcher & Task Router
+│       ├── module-boundary-CHIVE/   # Deep Modules & Information Hiding
+│       ├── cognitive-cleanse-CHIVE/ # Cognitive Ergonomics & Lexical Hygiene
+│       ├── design-explorer-CHIVE/   # Multi-Option Design & ADRs
+│       ├── strategic-debt-CHIVE/    # Strategic Engineering & PR Discipline
+│       ├── critical-resilience-CHIVE# Critical Path Tuning & Fail-Fast
+│       ├── topology-lifecycle-CHIVE # Systems Topology & Wide Events
+│       └── fact-verifier-CHIVE/     # Epistemic Fact-Verification Gate
+├── tests/
+│   ├── wallet_engine.py             # Production high-throughput settlement engine
+│   └── test_wallet_settlement.py    # Unit, concurrency stress, and invariant tests
+├── benchmarks/
+│   └── run_benchmark.py             # TPS & latency percentile profiler (20k tx)
+├── scripts/
+│   └── run_professional_validation.sh # Automated end-to-end validation runner
+└── docs/
+    ├── EXPERT_RESILIENCE_PLAYBOOK.md # Catalog of 10 production traps & solutions
+    ├── ANTI_IGNORE_GUIDE.md         # 8 root causes & 3-layer anti-ignorance defense
+    ├── VALIDATION_REPORT.md         # Full empirical benchmark & audit report
+    └── master_ensiklopedia.md       # Master 59,969-word software engineering treatise
+
+
 +-------------------------------------------------------------------------------+
 | LAYER 1: PERSISTENT SYSTEM CONTEXT (CLAUDE.md)                                |
 |   - Loaded into Claude Code's session context on EVERY turn.                  |
