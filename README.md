@@ -1,3 +1,4 @@
+# Claude-code-skill
 # claude-code-chive-system
 # 🏛️ CHIVE: Architectural Governance & Resilient Self-Healing Skill System for Claude Code
 
