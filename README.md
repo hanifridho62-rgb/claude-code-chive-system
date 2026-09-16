@@ -1,5 +1,5 @@
 # Claude-code-skill
-# claude-code-chive-system
+
 # 🏛️ CHIVE: Architectural Governance & Resilient Self-Healing Skill System for Claude Code
 
 [![Validate CHIVE Skill System](https://github.com/<username>/<repo>/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/<username>/<repo>/actions)
@@ -9,6 +9,9 @@
 [![Architecture: Ousterhout x Cordero](https://img.shields.io/badge/Architecture-Ousterhout%20%C3%97%20Cordero-emerald.svg)](https://docs.google.com/document/d/1-isVfp1Odrqsu7_fZKWZytWdLajPvfHIsBA2JA-KjYs/edit)
 
 > **"Systems in production are never perfect. Elite software engineering is not the illusion of flawless code, but the discipline of graceful failure, blast radius containment, deterministic self-healing, and uncompromised architectural boundaries."**
+
+SKILL.md file must be in the top-level folder, not nested deeper. Currently at claude-code-chive-system-main/claude-code-chive-system-english/skill.md
+SKILL.md must start with YAML frontmatter (---)
 
 ---
 
